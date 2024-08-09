@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Abril Display";
+  src: url("../src/fonts/Abril_Display_Regular.otf");
+}
+
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("../src/fonts/Proxima_Nova.otf");
+}
+
+@layer base {
+  * {
+    font-family: "Abril Display", sans-serif;
+  }
+}
+
+@layer components {
+  .border-bottom-menu-transparent {
+    @apply border-b-[8px] border-[solid] border-b-transparent;
+  }
+
+  .btn-border-orange {
+    @apply border-[2px] border-[solid] border-primaryBrownColor-0;
+  }
+
+  .resources .btn {
+    @apply mt-[60px];
+  }
+
+  .btn:has(.btn-hero) {
+    @apply hover:scale-[1.025];
+  }
+
+  .btn .transparentBg {
+    @apply border-solid border-primaryBrownColor-0 text-xl p-[10px] hover:bg-primaryBrownColor-0 hover:text-white border-[1px] rounded-[5px];
+  }
+
+  .btn .solidGreenBg {
+    @apply bg-tertiaryGreenColor-0 text-[white] w-56 h-11 text-center text-base px-6 py-3 font-proximaNova;
+  }
+
+  .btn .solidBrownBg {
+    @apply bg-primaryBrownColor-0 text-[black] w-56 h-11 text-center text-base px-6 py-3 font-bold mt-5 hover:text-white hover:bg-btnHoverColor-0;
+  }
+
+  /* Header Menu */
+
+  .header-dropdown.show {
+    display: block;
+  }
+
+  .header-dropdown li {
+    @apply hover:border-b-[0px] m-0 border-b-[0px] border-[solid] border-b-transparent px-5 py-3;
+  }
+
+  .header-dropdown li:hover {
+    @apply bg-btnHoverColor-0;
+  }
+
+  .header-dropdown li a {
+    @apply font-proximaNova text-lg;
+  }
+
+  .arrow::after {
+    @apply content-[""] inline-block ml-[0.28em] border-t-[0.42em] [border-top-style:solid] [border-top-color:initial] border-r-[0.32em] [border-right-style:solid] [border-right-color:transparent] border-l-[0.32em] [border-left-style:solid] [border-left-color:transparent];
+  }
+
+  /* End of Header Menu */
+
+  .author-resources-img {
+    @apply w-auto h-[336px] object-contain;
+  }
+
+  .author-resources-list {
+    text-align: -webkit-center;
+  }
+
+  .editions div {
+    @apply text-textBlackGrayColor-0;
+  }
+}
